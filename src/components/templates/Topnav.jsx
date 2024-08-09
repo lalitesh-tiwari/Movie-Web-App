@@ -1,8 +1,24 @@
-import React, { useState } from "react";
+import axios from "../../utils/axios";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import noimage from "/noimage.png";
 
 const Topnav = () => {
   const [searchQuery, setsearchQuery] = useState("");
+  const [searches, setsearches] = useState([]);
+
+  const GetSearches = async () => {
+    try {
+      const { data } = await axios.get(`/search/multi?query=${searchQuery}`);
+      setsearches(data.results);
+    } catch (error) {
+      console.log("Error:" + error);
+    }
+  };
+
+  useEffect(() => {
+    GetSearches();
+  }, [searchQuery]);
 
   return (
     <div className="w-full h-[10vh] relative flex justify-start items-center text-white">
@@ -20,11 +36,27 @@ const Topnav = () => {
           className="ri-close-large-line text-2xl"
         ></i>
       )}
-      <div className="absolute w-[50%] max-h-[45vh] overflow-auto top-[81%] left-[18.5%] rounded-lg bg-[#6556CD] text-black">
-        {/* <Link className="w-full flex justify-start items-center font-semibold border-b border-black/40 p-10 hover:bg-white/85 hover:text-[#6556CD] duration-200">
-          <img src="" />
-          <span>Hello Everyone..</span>
-        </Link> */}
+      <div className="absolute w-[50%] max-h-[50vh] overflow-auto top-[81%] left-[18.5%] rounded-lg bg-[#6556CD] text-black">
+        {searches.map((s, i) => (
+          <Link
+            key={i}
+            className="w-full flex justify-start items-center gap-3 font-semibold border-b border-black/40 p-2 hover:bg-white/85 hover:text-[#6556CD] duration-200"
+          >
+            <img
+              className="w-[8vw] h-[20vh] object-cover rounded"
+              src={
+                s.backdrop_path || s.profile_path
+                  ? `https://image.tmdb.org/t/p/original/${
+                      s.backdrop_path || s.profile_path
+                    }`
+                  : noimage
+              }
+            />
+            <span>
+              {s.name || s.title || s.original_name || s.original_title}
+            </span>
+          </Link>
+        ))}
       </div>
     </div>
   );
