@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Sidenav = () => {
   return (
-    <div className="w-[20%] h-full border-r border-white/50 p-3">
+    <div className="w-[20%] h-full border-r border-white/20 p-3">
       <h1 className="text-3xl text-white font-bold w-fit mx-auto">
         <span className="text-[#6556CD] mr-1 font-extralight">
           <i className="ri-movie-2-fill"></i>
