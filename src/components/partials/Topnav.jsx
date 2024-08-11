@@ -21,14 +21,14 @@ const Topnav = () => {
   }, [searchQuery]);
 
   return (
-    <div className="w-full h-[8vh] relative flex justify-start items-center text-white">
-      <i className="ri-search-2-line text-2xl ml-[15%]"></i>
+    <div className="w-[50%] h-[8vh] relative flex justify-start items-center text-white">
+      <i className="ri-search-2-line text-2xl ml-[5%]"></i>
       <input
         onChange={(e) => setsearchQuery(e.target.value)}
         value={searchQuery}
         type="text"
         placeholder="Search Anything..."
-        className="w-[50%] outline-none border border-white/30 p-2 rounded-lg bg-transparent mx-5"
+        className="w-[80%] outline-none border border-white/30 p-2 rounded-lg bg-transparent mx-5"
       />
       {searchQuery.length > 0 && (
         <i
@@ -36,7 +36,7 @@ const Topnav = () => {
           className="ri-close-large-line text-2xl cursor-pointer"
         ></i>
       )}
-      <div className="absolute w-[50%] max-h-[50vh] overflow-auto top-[81%] left-[18.5%] rounded-lg bg-[#6556CD] text-black">
+      <div className="absolute w-[80%] max-h-[50vh] overflow-auto top-[81%] left-[12%] rounded-lg bg-[#6556CD] text-black">
         {searches.map((s, i) => (
           <Link
             key={i}

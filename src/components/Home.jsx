@@ -5,6 +5,7 @@ import Topnav from "./partials/Topnav";
 import Header from "./partials/Header";
 import HorizontalCards from "./partials/HorizontalCards";
 import Dropdown from "./partials/Dropdown";
+import Loader from "./Loader"
 
 const Home = () => {
   document.title = "MovieApp | HomePage";
@@ -60,7 +61,7 @@ const Home = () => {
       </div>
     </>
   ) : (
-    <h1>Loading..</h1>
+    <Loader />
   );
 };
 

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background: #1F1E24;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -36,13 +40,12 @@ select::-ms-expand {
 .select {
   position: relative;
   display: flex;
-  width: 12vmax;
+  width: 15vmax;
   height: 3vmax;
   line-height: 3;
   background: #27272a;
   overflow: hidden;
   border-radius: 0.25em;
-  margin-bottom: 0.5vmax;
 }
 
 .select::after {

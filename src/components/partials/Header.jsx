@@ -14,7 +14,7 @@ const Header = ({ data }) => {
       className="w-[95%] h-[65vh] mx-auto rounded-lg border-2 border-[#6556CD] text-white flex flex-col gap-[0.5vmax] justify-end items-start p-[2.5vmax]"
     >
       <h1 className="text-[3vmax] font-semibold">
-        {data.title || data.orginal_title}
+        {data.title || data.orginal_title || data.name || data.original_name}
       </h1>
       <p className="w-[65%] text-[0.8vmax]">
         {data.overview.slice(0, 200)}... <Link className="underline">more</Link>

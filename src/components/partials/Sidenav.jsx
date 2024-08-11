@@ -14,7 +14,10 @@ const Sidenav = () => {
         <h1 className="text-3xl font-bold tracking-wider w-full h-[3.5vmax]">
           Categories
         </h1>
-        <Link className="w-full h-[3.5vmax] text-gray-400 flex items-center gap-1 hover:text-white hover:bg-[#6556CD] rounded-lg pl-2 duration-200">
+        <Link
+          to="/trending"
+          className="w-full h-[3.5vmax] text-gray-400 flex items-center gap-1 hover:text-white hover:bg-[#6556CD] rounded-lg pl-2 duration-200"
+        >
           <i className="ri-fire-fill"></i>Trendings
         </Link>
         <Link className="w-full h-[3.5vmax] text-gray-400 flex items-center gap-1 hover:text-white hover:bg-[#6556CD] rounded-lg pl-2 duration-200">
