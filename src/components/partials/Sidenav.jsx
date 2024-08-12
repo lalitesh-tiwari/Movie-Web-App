@@ -20,16 +20,28 @@ const Sidenav = () => {
         >
           <i className="ri-fire-fill"></i>Trendings
         </Link>
-        <Link className="w-full h-[3.5vmax] text-gray-400 flex items-center gap-1 hover:text-white hover:bg-[#6556CD] rounded-lg pl-2 duration-200">
+        <Link
+          to="/popular"
+          className="w-full h-[3.5vmax] text-gray-400 flex items-center gap-1 hover:text-white hover:bg-[#6556CD] rounded-lg pl-2 duration-200"
+        >
           <i className="ri-sparkling-fill"></i>Populars
         </Link>
-        <Link className="w-full h-[3.5vmax] text-gray-400 flex items-center gap-1 hover:text-white hover:bg-[#6556CD] rounded-lg pl-2 duration-200">
+        <Link
+          to="/movie"
+          className="w-full h-[3.5vmax] text-gray-400 flex items-center gap-1 hover:text-white hover:bg-[#6556CD] rounded-lg pl-2 duration-200"
+        >
           <i className="ri-movie-fill"></i>Movies
         </Link>
-        <Link className="w-full h-[3.5vmax] text-gray-400 flex items-center gap-1 hover:text-white hover:bg-[#6556CD] rounded-lg pl-2 duration-200">
+        <Link
+          to="/tvshow"
+          className="w-full h-[3.5vmax] text-gray-400 flex items-center gap-1 hover:text-white hover:bg-[#6556CD] rounded-lg pl-2 duration-200"
+        >
           <i className="ri-tv-fill"></i>Web/Tv Series
         </Link>
-        <Link className="w-full h-[3.5vmax] text-gray-400 flex items-center gap-1 hover:text-white hover:bg-[#6556CD] rounded-lg pl-2 duration-200">
+        <Link
+          to="/celebs"
+          className="w-full h-[3.5vmax] text-gray-400 flex items-center gap-1 hover:text-white hover:bg-[#6556CD] rounded-lg pl-2 duration-200"
+        >
           <i className="ri-user-star-fill"></i>Celebs
         </Link>
       </nav>

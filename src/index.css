@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background: #1F1E24;
+body {
+  background: #1f1e24;
 }
 
 ::-webkit-scrollbar {
